@@ -1,8 +1,14 @@
 {
-  "builds": [
-    { "src": "build/web/**", "use": "@vercel/static" }
-  ],
+  "buildCommand": "flutter build web --release",
+  "outputDirectory": "build/web",
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|map))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
