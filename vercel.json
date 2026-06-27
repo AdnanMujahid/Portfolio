@@ -1,5 +1,5 @@
 {
-  "buildCommand": "git clone https://github.com/flutter/flutter.git --depth 1 --branch stable && export PATH=\"$PATH:`pwd`/flutter/bin\" && flutter doctor && flutter clean && flutter config --enable-web && flutter build web --release",
+  "buildCommand": "flutter build web --release",
   "outputDirectory": "build/web",
   "routes": [
     {
